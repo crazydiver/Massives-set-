@@ -1,0 +1,10 @@
+var pwrs2:array [1..30] of longint;
+    n,i:longint;
+begin
+  read(n);
+  pwrs2[1]:=2;
+  for i:=2 to n do
+    pwrs2[i]:=pwrs2[i-1]*2;
+  for i:=i downto 1 do
+    write(pwrs2[i],' ');
+end.
