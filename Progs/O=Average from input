@@ -1,0 +1,14 @@
+var mas:array [1..10000] of longint;
+    b1,b2,n,sum,i:longint;
+begin
+  read(b1,b2,n);
+  sum:=0;
+  for i:=1 to n do
+    begin
+      mas[i]:=random(b2-b1)+b1;
+      sum+=mas[i];
+      write(mas[i],' ');
+    end;
+  writeln;
+  writeln(sum/n);
+end.
