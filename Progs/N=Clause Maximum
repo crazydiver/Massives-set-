@@ -1,0 +1,22 @@
+var mas:array [1..10000] of longint;
+    b1,b2,n,i,max:longint;
+    checker:boolean;
+begin
+  max:=0; checker:=false;
+  read(b1,b2,n);
+  for i:=1 to n do
+    begin
+      mas[i]:=random(b2-b1)+b1;
+      write(mas[i],' ');
+      if (mas[i] mod 2 = 0)and(mas[i]>0) and(max<mas[i]) then
+        begin
+          max:=mas[i];
+          checker:=true;
+        end;
+    end;
+  writeln;
+  if checker then 
+    write(max,' ')
+  else
+    writeln('-1');
+end.
