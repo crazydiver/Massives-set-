@@ -1,0 +1,10 @@
+var mass: array [1..10000] of integer;
+i,n,x,l:longint;
+begin
+  read(x,n);
+  mass[1]:=x;
+  for i:=2 to n do
+    mass[i]:=mass[i-1]+1;
+  for i:=n downto 1 do
+    write(mass[i],' ');
+end.
