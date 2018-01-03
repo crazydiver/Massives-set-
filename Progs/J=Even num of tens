@@ -1,0 +1,19 @@
+var
+    mas:array [1..10000] of longint;
+    min,count,max,n:longint;
+    i:longint;
+begin
+  count:=0;
+  read(min,max,n);
+  for i:=1 to n do
+    begin
+      mas[i]:=random(max-min)+min;
+      write(mas[i],' ');
+    end;
+  writeln;
+  for i:=1 to n do
+    if (mas[i]div 10 mod 10) mod 2 =0 then
+      count+=1;
+  write(count);
+  writeln;
+end.
