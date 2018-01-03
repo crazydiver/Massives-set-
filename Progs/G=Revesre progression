@@ -1,0 +1,10 @@
+var progr:array [1..10000] of longint;
+    x,n,i,d:longint;
+begin
+  read(x,d,n);
+  progr[1]:=x;
+  for i:=2 to n do
+    progr[i]:=progr[i-1]+d;
+  for i:=n downto 1 do
+    write(progr[i],' ');
+end.
