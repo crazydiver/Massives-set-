@@ -1,0 +1,23 @@
+var
+    mas:array [1..10000] of longint;
+    min,c1,c2,max,n:longint;
+    i:longint;
+begin
+  c1:=0; c2:=0;
+  read(min,max,n);
+  for i:=1 to n do
+    begin
+      mas[i]:=random(max-min)+min;
+      write(mas[i],' ');
+    end;
+  writeln;
+  for i:=1 to n do
+    begin
+      if mas[i] mod 2=0  then
+        c1+=1
+      else
+        c2+=1;
+    end;
+  write(c1,' ',c2);
+  writeln;
+end.
