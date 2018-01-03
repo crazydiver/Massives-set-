@@ -1,0 +1,19 @@
+var
+  mas:array [1..40] of longint;
+  i, n: integer;
+  y, x, sum: longint;
+begin
+  read(n);
+  x := 1;
+  y := 0;
+  sum := 1;
+  for i := 1 to n do
+    begin
+      sum := x;
+      x := y + x;
+      y := sum;
+      mas[i]:=sum;
+      write(mas[i], ' ');
+    end;
+  writeln;
+end.
