@@ -1,0 +1,21 @@
+var
+    mas:array [1..10000] of longint;
+    min,count,max,n:longint;
+    st: string;
+    i:longint;
+begin
+  count:=0;
+  read(min,max,n);
+  for i:=1 to n do
+    begin
+      mas[i]:=random(max-min)+min;
+      write(mas[i],' ');
+      str(mas[i],st);
+      if Length(st) = 3 then
+        if (mas[i] mod 5) > 0 then
+          count+=1;
+    end;
+  writeln;
+  write(count);
+  writeln;
+end.K
