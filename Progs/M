@@ -1,0 +1,30 @@
+function sum(inp:longint):longint;
+var res:longint;
+begin
+  res:=0;
+  repeat
+    res+=inp mod 10;
+    inp:= inp div 10;
+  until inp=0;
+  sum:=res;
+end;
+var
+    mas:array [1..10000] of longint;
+    min,max,n,c1,k:longint;
+    i:longint;
+begin
+  c1:=0;
+  read(min,max,n,k);
+ // read(n,k);
+  for i:=1 to n do
+    begin
+     mas[i]:=random(max-min)+min;
+    // read(mas[i]);
+      write(mas[i],' ');
+      if sum(mas[i])=k then
+        c1+=1;
+    end;
+  writeln;
+  write(c1);
+  writeln;
+end.
